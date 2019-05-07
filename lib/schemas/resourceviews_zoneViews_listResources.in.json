@@ -1,0 +1,45 @@
+{
+    "type": "object",
+    "properties": {
+        "format": {
+            "type": "string",
+            "enum": [
+                "NONE",
+                "URL",
+                "URL_PORT"
+            ]
+        },
+        "listState": {
+            "type": "string",
+            "enum": [
+                "ALL",
+                "RUNNING"
+            ],
+            "default": "ALL"
+        },
+        "maxResults": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 5000,
+            "default": 5000
+        },
+        "pageToken": {
+            "type": "string"
+        },
+        "project": {
+            "required": true,
+            "type": "string"
+        },
+        "resourceView": {
+            "required": true,
+            "type": "string"
+        },
+        "serviceName": {
+            "type": "string"
+        },
+        "zone": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

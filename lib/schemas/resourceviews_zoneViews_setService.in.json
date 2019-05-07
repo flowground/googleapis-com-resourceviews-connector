@@ -1,0 +1,62 @@
+{
+    "type": "object",
+    "properties": {
+        "project": {
+            "required": true,
+            "type": "string"
+        },
+        "resourceView": {
+            "required": true,
+            "type": "string"
+        },
+        "zone": {
+            "required": true,
+            "type": "string"
+        },
+        "oauth_token": {
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "endpoints": {
+                    "description": "The service information to be updated.",
+                    "items": {
+                        "description": "The service endpoint that may be started in a VM.",
+                        "properties": {
+                            "name": {
+                                "description": "The name of the service endpoint.",
+                                "type": "string"
+                            },
+                            "port": {
+                                "description": "The port of the service endpoint.",
+                                "format": "int32",
+                                "type": "integer"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "fingerprint": {
+                    "description": "Fingerprint of the service information; a hash of the contents. This field is used for optimistic locking when updating the service entries.",
+                    "type": "string"
+                },
+                "resourceName": {
+                    "description": "The name of the resource if user wants to update the service information of the resource.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

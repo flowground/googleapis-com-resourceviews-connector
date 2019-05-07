@@ -1,0 +1,117 @@
+{
+    "type": "object",
+    "properties": {
+        "project": {
+            "required": true,
+            "type": "string"
+        },
+        "zone": {
+            "required": true,
+            "type": "string"
+        },
+        "key": {
+            "type": "string"
+        },
+        "oauth_token": {
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "The resource view object.",
+            "properties": {
+                "creationTimestamp": {
+                    "description": "The creation time of the resource view.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "The detailed description of the resource view.",
+                    "type": "string"
+                },
+                "endpoints": {
+                    "description": "Services endpoint information.",
+                    "items": {
+                        "description": "The service endpoint that may be started in a VM.",
+                        "properties": {
+                            "name": {
+                                "description": "The name of the service endpoint.",
+                                "type": "string"
+                            },
+                            "port": {
+                                "description": "The port of the service endpoint.",
+                                "format": "int32",
+                                "type": "integer"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "fingerprint": {
+                    "description": "The fingerprint of the service endpoint information.",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "[Output Only] The ID of the resource view.",
+                    "type": "string"
+                },
+                "kind": {
+                    "default": "resourceviews#resourceView",
+                    "description": "Type of the resource.",
+                    "type": "string"
+                },
+                "labels": {
+                    "description": "The labels for events.",
+                    "items": {
+                        "description": "The Label to be applied to the resource views.",
+                        "properties": {
+                            "key": {
+                                "description": "Key of the label.",
+                                "type": "string"
+                            },
+                            "value": {
+                                "description": "Value of the label.",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "The name of the resource view.",
+                    "type": "string"
+                },
+                "network": {
+                    "description": "The URL of a Compute Engine network to which the resources in the view belong.",
+                    "type": "string"
+                },
+                "resources": {
+                    "description": "A list of all resources in the resource view.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "selfLink": {
+                    "description": "[Output Only] A self-link to the resource view.",
+                    "type": "string"
+                },
+                "size": {
+                    "description": "The total number of resources in the resource view.",
+                    "format": "uint32",
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        }
+    }
+}
