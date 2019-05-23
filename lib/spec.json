@@ -3925,7 +3925,7 @@
                 "description": "Oauth 2.0 implicit authentication",
                 "type": "oauth2",
                 "flows": {
-                    "implicit": {
+                    "authorizationCode": {
                         "authorizationUrl": "https://accounts.google.com/o/oauth2/auth",
                         "scopes": {
                             "https://www.googleapis.com/auth/cloud-platform": "View and manage your data across Google Cloud Platform services",
@@ -3934,7 +3934,8 @@
                             "https://www.googleapis.com/auth/compute.readonly": "View your Google Compute Engine resources",
                             "https://www.googleapis.com/auth/ndev.cloudman": "View and manage your Google Cloud Platform management resources and deployment status information",
                             "https://www.googleapis.com/auth/ndev.cloudman.readonly": "View your Google Cloud Platform management resources and deployment status information"
-                        }
+                        },
+                        "tokenUrl": "https://www.googleapis.com/oauth2/v4/token"
                     }
                 }
             },
